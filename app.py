@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 
 
 app = dash.Dash(
-    __name__, plugins=[dl.plugins.pages], external_stylesheets=[dbc.themes.BOOTSTRAP]
+    __name__, plugins=[dl.plugins.pages], external_stylesheets=[dbc.themes.CYBORG]
 )
 
 navbar = dbc.NavbarSimple([
@@ -20,8 +20,8 @@ navbar = dbc.NavbarSimple([
     ),
     dbc.NavItem(dbc.NavLink("Nosotros", href="/nosotros")),
     ],
-    brand="Multi Page App Plugin Demo",
-    color="primary",
+    brand="Team 123",
+    color="dark",
     dark=True,
     className="mb-2",
 )
@@ -32,4 +32,4 @@ app.layout = dbc.Container(
 )
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(host='127.0.0.1', port=8050, debug=True)
